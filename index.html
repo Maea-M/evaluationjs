@@ -19,26 +19,31 @@
         <button id="newGame"><i class="bi bi-plus-circle"></i> NEW GAME</button>
 
         <div class="container">
-            <div class="playerOneContainer">
-                <h2>Player 1</h2>
+            <!--Player One-->
+            <div class="player-One-Container">Player 1</div>
+            <div id="scoreOne"></div>
+            <div class="current-box">
+                <div class="current-player">CURRENT</div>
+                <div id="currentScoreOne"></div>
             </div>
 
-            <div class="playerTwoContainer">
-                <h2>Player 2</h2>
+
+            <!--Player Two-->
+            <div class="player-Two-Container">Player 2</div>
+            <div id="scoreTwo"></div>
+            <div class="current-box">
+                <div class="current-player">CURRENT</div>
+                <div id="currentScoreTwo"></div>
             </div>
+
+            <!--Button and Dice-->
+            <img id="diceImg" src="/images/face1.png" alt="dé pour jouer">
 
             <div>
                 <button id="rollDice"><i class="bi bi-arrow-clockwise"></i> ROLL DICE</button>
-                <div id="diceGenerate">
-                    
-                </div>
             </div>
         
             <div>
-                <div>
-                    <h3 id="current">CURRENT</h3>
-                </div>
-                
                 <button id="hold"><i class="bi bi-box-arrow-in-down"></i> HOLD</button>
             </div>
         </div>
