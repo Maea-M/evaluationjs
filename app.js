@@ -14,7 +14,8 @@ let newGame = document.getElementById("newGame").addEventListener("click", ()=>{
 let rollDice = document.getElementById("rollDice").addEventListener("click", ()=>{
     let dice = Math.floor(Math.random()* 6 ) + 1 ;
     roundScore += dice;
-};
+}
+);
 
 /*3/Lorsqu'on clique sur le boutton Hold :
 - les rounds du player sont envoyés dans le global
