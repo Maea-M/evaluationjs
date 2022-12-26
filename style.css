@@ -1,4 +1,16 @@
 body{
     background-color: aqua;
     font-family: 'Lato', sans-serif;
+    border : solid 10px rgba(233,217,133,1);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bi{
+    font-size: 36px;
 }
