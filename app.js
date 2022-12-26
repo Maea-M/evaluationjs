@@ -1,9 +1,16 @@
-console.log("coucou!");
+let globalPlayerOne = 0;
+let globalPlayerTwo = 0;
 
 /* 
 1/ lorsqu'on clique sur le boutton NewGame, les scores sont remis à 0
+*/
+let newGame = document.getElementById("newGame").addEventListener("click", () => {
+    globalPlayerOne = 0;
+    globalPlayerTwo = 0;
+}
+);
 
-2/Lorsqu'on clique sur le boutton Hold :
+/*2/Lorsqu'on clique sur le boutton Hold :
 - les rounds du player sont envoyés dans le global
 - c'est au tour de l'autre joueur de lancer
 
@@ -18,3 +25,4 @@ console.log("coucou!");
 5/Lorsqu'un joueur arrive à 100:
 - la partie est gagnée
 - on ne peut plus continuer à jouer
+*/
