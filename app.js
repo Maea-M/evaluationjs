@@ -1,6 +1,4 @@
-let globalPlayer, roundScore, activePlayer  
-const diceGenerate = document.getElementById("diceGenerate");
-let diceArray = ['face1.png', 'face2.png', 'face3.png', 'face4.png', 'face5.png', 'face6.png'];
+let globalPlayer, roundScore, activePlayer, launchGame
 
 /* 
 1/ lorsqu'on clique sur le boutton NewGame, les scores sont remis à 0, player1 est actif
@@ -8,7 +6,7 @@ let diceArray = ['face1.png', 'face2.png', 'face3.png', 'face4.png', 'face5.png'
 function beginGame() {
     globalPlayer = [0,0];
     roundScore = 0;
-    activePlayer = 'player1';
+    activePlayer = '1';
     launchGame = true;
 }
 const newGame = document.getElementById("newGame").addEventListener("click", ()=>{
@@ -24,42 +22,52 @@ le currentScore revient à 0
 function nextPlayer(){
     roundScore = 0;
 
-    if (activePlayer === 'player1') {
-        activePlayer = 'player2';
-    }else activePlayer = 'player1';
+    if (activePlayer === '1') {
+        activePlayer = '2';
+    }else activePlayer = '1';
 
-    document.getElementById("currentScoreOne").textContent = 0;
-    document.getElementById("currentScoreTwo").textContent = 0;
+    document.getElementById("current-1").textContent = 0;
+    document.getElementById("current-2").textContent = 0;
     document.querySelector(".player-One-Container").classList.toggle("active");
     document.querySelector(".player-Two-Container").classList.toggle("active");
     document.querySelector("#diceImg").style.display = "block";
 }
 
 /*2/Lorsqu'on clique sur ROllDice*/
-const rollDice = document.getElementById("rollDice").addEventListener("click", ()=>{
-    /*un nombre aléatoire est généré par le dé*/
-    let dice = Math.floor(Math.random()* 6 ) + 1 ;
-    console.log(dice);
+document.getElementById("rollDice").addEventListener("click", ()=>{
+    if(launchGame) {
+        /*un nombre aléatoire est généré par le dé*/
+        let dice = Math.floor(Math.random()* 6 ) + 1 ;
+        console.log(dice);
 
-    /*- le dé doit changer de face*/
-    let image = document.getElementById("diceImg")
-    image.scr = `images/face${dice}.png`;
+        /*- le dé doit changer de face*/
+        /*let image = document.querySelector("diceImg");
+        image.style.display = "block";
+        image.src = `images/face-${dice}.png`;*/
 
-    /*Lorsque la valeur du dé vaut 1:
-    - le score round revient à zéro
-    - c'est au tour de l'autre joueur de lancer*/
-    if (dice !== 1){
+        /*Lorsque la valeur du dé vaut 1:
+        - le score round revient à zéro
+        - c'est au tour de l'autre joueur de lancer*/
+        if (dice !== 1){
         roundScore += dice;
-    } else{
+        document.getElementById(`current-${activePlayer}`).textContent = roundScore;
+        console.log(roundScore)
+        } else{
         nextPlayer();
+        }
     }
 }
 );
 
 /*3/Lorsqu'on clique sur le boutton Hold*/
-const hold = document.getElementById("hold").addEventListener("click", ()=>{
-    /*les rounds du player sont envoyés dans le global*/
-    globalPlayer += roundScore;
+document.getElementById("hold").addEventListener("click", ()=>{
+    if (launchGame) {
+        /*les rounds du player sont envoyés dans le global*/
+        globalPlayer [activePlayer] += roundScore;
+        document.querySelector("#score-" + activePlayer).textContent = globalPlayer[activePlayer];
+        console.log(globalPlayer)
+    }
+    
 
     /*c'est au tour de l'autre joueur de lancer*/
     nextPlayer();
