@@ -46,12 +46,13 @@ document.getElementById("rollDice").addEventListener("click", ()=>{
         image.src = `images/face-${dice}.png`;*/
 
         /*Lorsque la valeur du dé vaut 1:
-        - le score round revient à zéro
-        - c'est au tour de l'autre joueur de lancer*/
+        - le score round revient à zéro*/
         if (dice !== 1){
         roundScore += dice;
         document.getElementById(`current-${activePlayer}`).textContent = roundScore;
         console.log(roundScore)
+        /*        - c'est au tour de l'autre joueur de lancer*/
+
         } else{
         nextPlayer();
         }
@@ -68,16 +69,18 @@ document.getElementById("hold").addEventListener("click", ()=>{
         console.log(globalPlayer)
     }
     
-
     /*c'est au tour de l'autre joueur de lancer*/
     nextPlayer();
 }
 );
 
-
-
-
 /*5/Lorsqu'un joueur arrive à 100:
 - la partie est gagnée
 - on ne peut plus continuer à jouer
 */
+if (globalPlayer[activePlayer] >= 100) {
+    alert('Vous avez gagné')
+    launchGame = false;
+    } else {
+    endGame();
+    };
