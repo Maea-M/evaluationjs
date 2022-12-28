@@ -66,7 +66,7 @@ rollDice.addEventListener('click', ()=>{
     
         /*- le dé doit changer de face*/
         let image = document.querySelector("#diceImg");
-        image.src = `face-${dice}.png`;
+        image.src = `images/face-${dice}.png`;
     
         /*Lorsque la valeur du dé vaut 1:
         - le score round revient à zéro*/
@@ -82,16 +82,13 @@ rollDice.addEventListener('click', ()=>{
 });
     
     /*3/Lorsqu'on clique sur le boutton Hold*/
-    hold.addEventListener("click", ()=>{
-        if (launchGame) {
-            /*les rounds du player sont envoyés dans le global*/
-            globalPlayer [activePlayer] += roundScore;
-            document.querySelector("#score-" + activePlayer).textContent = globalPlayer[activePlayer];
-            console.log(globalPlayer)
-        }
-        
-        /*c'est au tour de l'autre joueur de lancer*/
-        nextPlayer();
+hold.addEventListener("click", ()=>{
+    if (launchGame) {
+        /*les rounds du player sont envoyés dans le global*/
+        globalPlayer [activePlayer] += roundScore;
+    } else { 
+        nextPlayer()
+    };
     }
 );
 
@@ -103,6 +100,4 @@ rollDice.addEventListener('click', ()=>{
 if (globalPlayer[activePlayer] >= 100) {
     launchGame = false
     dice.classList.add('hidden');
-    } else {
-    alert ('Une erreur s\'est produite');
-    };
+    }
