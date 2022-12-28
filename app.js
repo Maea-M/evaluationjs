@@ -1,25 +1,33 @@
 /*
 GlobalPlayer = tableau pour récupérer les scores des 2 joueurs, 
+id = globalScore-1 globalScore-2
 roundScore = le score par set,
+id= current-1 et current-2
 activePlayer = player 1 ou 2,
+id= player-1 et player-2
 launchGame =  vrai si lancé
 */
 let globalPlayer, roundScore, activePlayer, launchGame;
 
-/*faire des const pour bouttons et dé*/
-const dice = document.querySelector('.diceImg');
+/*faire des const pour bouttons et dé
+id dé =  diceImg
+id boutton nouvelle partie = newGame
+id boutton lancer le dé = rollDice
+id boutton tenir = hold
+*/
+const dice = document.querySelector('#diceImg');
 const newGame = document.querySelector('#newGame');
 const rollDice = document.querySelector('#rollDice');
 const hold = document.querySelector('#hold');
 
 /* faire comme une card memory pour les dés?*/
-rollDice.addEventListener('click',()=>{
+/*rollDice.addEventListener('click',()=>{
     if (diceImg.classList.contains("hidden")){
         diceImg.classList.remove("hidden")
     } else {
         diceImg.classList.add("hidden")
     }
-})
+})*/
 
 /* 
 1/ lorsqu'on clique sur le boutton NewGame, les scores sont remis à 0, player1 est actif
@@ -57,8 +65,7 @@ rollDice.addEventListener('click', ()=>{
         console.log(dice);
     
         /*- le dé doit changer de face*/
-        let image = document.querySelector("diceImg");
-        image.remove('hidden');
+        let image = document.querySelector("#diceImg");
         image.src = `face-${dice}.png`;
     
         /*Lorsque la valeur du dé vaut 1:

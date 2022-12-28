@@ -15,38 +15,38 @@
         <h1>Jeu du dé</h1>
     </header>
 
-    <main class="flex">
-        <button id="newGame"><i class="bi bi-plus-circle"></i> NEW GAME</button>
+    <main class="flex"></main>
 
-        <div class="container flex">
-            <!--Player One-->
-            <div class="player-One-Container">Player 1</div>
-            <div id="score-1"></div>
+        <!--Player One-->
+        <section class="player-One-Container">
+            <h2 class="player" id="player-1">Player 1</h2>
+            <p>Total Score</p>
+            <p id="globalScore-1">0</p>
             <div class="current-box">
-                <div class="current-player">CURRENT</div>
-                <div id="current-1"></div>
+                <div class="current-player">Current</div>
+                <div id="current-1">0</div>
             </div>
+        </section>
 
 
-            <!--Player Two-->
-            <div class="player-Two-Container">Player 2</div>
-            <div id="score-2"></div>
-            <div class="current-box">
-                <div class="current-player">CURRENT</div>
-                <div id="current-2"></div>
-            </div>
+        <!--Player Two-->
+        <section>
+            <section class="player-Two-Container">
+                <h2 class="player" id="player-2">Player 2</h2>
+                <p>Total Score</p>
+                <p id="globalScore-2">0</p>
+                <div class="current-box">
+                    <div class="current-player">Current</div>
+                    <div id="current-2">0</div>
+                </div>
+        </section>
 
-            <!--Button and Dice-->
-            <img id="diceImg" src="/images/face-1.png" alt="dé pour jouer">
 
-            <div>
-                <button id="rollDice"><i class="bi bi-arrow-clockwise"></i> ROLL DICE</button>
-            </div>
-        
-            <div>
-                <button id="hold"><i class="bi bi-box-arrow-in-down"></i> HOLD</button>
-            </div>
-        </div>
+        <!--Button and Dice-->
+        <img id="diceImg" src="/images/face-1.png" alt="dé pour jouer">
+        <button class="btn" id="newGame"><i class="bi bi-plus-circle"></i> NEW GAME</button>
+        <button class="btn" id="rollDice"><i class="bi bi-arrow-clockwise"></i> ROLL DICE</button>
+        <button class="btn" id="hold"><i class="bi bi-box-arrow-in-down"></i> HOLD</button>
             
     </main>
     
@@ -55,6 +55,7 @@
         <p>Ce site a été réalisé dans le cadre d'une évaluation</p>
         <p>Morgane Mahé <i class="bi bi-c-circle"></i> Copyright 2022</p>
     </footer>
+
     <!-- Script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="app.js"></script>
