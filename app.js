@@ -33,12 +33,12 @@ const hold = document.querySelector('#hold');
 1/ lorsqu'on clique sur le boutton NewGame, les scores sont remis à 0, player1 est actif
 */
 function beginGame() {
-    globalPlayer = [0,0];
+    globalPlayer = [0, 0];
     roundScore = 0;
     activePlayer = '1';
     launchGame = true;
 }
-
+beginGame()
 
 /*function changer de joueur : le roundScore revient à 0, 
 le joueur inactif veient actif
