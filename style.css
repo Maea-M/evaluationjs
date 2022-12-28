@@ -1,27 +1,41 @@
+/* Global*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 body{
     background-color: #E2E2E2;
     font-family: 'Lato', sans-serif;
     border : solid 10px #384D48;
 }
 
-.container {
-    background-color: #ACAD94;
-}
-
-.player-One-Container{
-    background-color: #6E7271;
-}
-
-.player-Two-Container {
-    background-color: #6E7271;
-}
 .flex {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* specific*/
+main {
+    background-color: #ACAD94;
+    flex-direction: column;
+}
+
+section{
+    background-color: #6E7271;
+}
+
+footer {
     flex-direction: column;
 }
 
 .bi{
     font-size: 36px;
+}
+
+.hidden {
+    display: none;
 }
