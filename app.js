@@ -20,15 +20,6 @@ const newGame = document.querySelector('#newGame');
 const rollDice = document.querySelector('#rollDice');
 const hold = document.querySelector('#hold');
 
-/* faire comme une card memory pour les dés?*/
-/*rollDice.addEventListener('click',()=>{
-    if (diceImg.classList.contains("hidden")){
-        diceImg.classList.remove("hidden")
-    } else {
-        diceImg.classList.add("hidden")
-    }
-})*/
-
 /* 
 1/ lorsqu'on clique sur le boutton NewGame, les scores sont remis à 0, player1 est actif
 */
@@ -62,7 +53,6 @@ rollDice.addEventListener('click', ()=>{
     if (launchGame) {
         /*un nombre aléatoire est généré par le dé*/
         let dice = Math.floor(Math.random()* 6 ) + 1 ;
-        console.log(dice);
     
         /*- le dé doit changer de face*/
         let image = document.querySelector("#diceImg");
@@ -86,8 +76,12 @@ hold.addEventListener("click", ()=>{
     if (launchGame) {
         /*les rounds du player sont envoyés dans le global*/
         globalPlayer [activePlayer] += roundScore;
-    } else { 
+        document.getElementById(`globalScore-${activePlayer}`).textContent =
+        globalPlayer [activePlayer];
+        console.log(globalPlayer)
         nextPlayer()
+    } else { 
+        
     };
     }
 );
@@ -98,6 +92,7 @@ hold.addEventListener("click", ()=>{
 */
 
 if (globalPlayer[activePlayer] >= 100) {
+    alert ('vous avez gagné!')
     launchGame = false
     dice.classList.add('hidden');
     }
