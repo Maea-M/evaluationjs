@@ -26,7 +26,7 @@ const hold = document.querySelector('#hold');
 function beginGame() {
     globalPlayer = [0, 0];
     roundScore = 0;
-    activePlayer = '1';
+    activePlayer = '0';
     launchGame = true;
 }
 beginGame()
@@ -38,12 +38,12 @@ le currentScore revient à 0
 function nextPlayer(){
     roundScore = 0;
 
-    if (activePlayer === '1') {
-        activePlayer = '2';
-    } else activePlayer = '1';
+    if (activePlayer === '0') {
+        activePlayer = '1';
+    } else activePlayer = '0';
 
+    document.getElementById("current-0").textContent = 0;
     document.getElementById("current-1").textContent = 0;
-    document.getElementById("current-2").textContent = 0;
     document.querySelector(".player-One-Container").classList.toggle("active");
     document.querySelector(".player-Two-Container").classList.toggle("active");
 }

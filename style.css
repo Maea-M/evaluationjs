@@ -39,3 +39,9 @@ footer {
 .hidden {
     display: none;
 }
+
+#diceImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+}
