@@ -21,19 +21,39 @@ body{
 /* specific*/
 main {
     background-color: #ACAD94;
+    border-radius: 5px;
     flex-direction: column;
 }
 
 section{
     background-color: #6E7271;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 80vw;
+    padding: 10px;
+    margin: 10px;
+}
+
+.current-box{
+    flex-direction: column;
+    background-color: #E2E2E2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn{
+    border: solid 2px #384D48;
+    margin: 5px;
+    padding: 5px;
 }
 
 footer {
     flex-direction: column;
+    padding: 5px;
 }
 
 .bi{
-    font-size: 36px;
+    font-size: 20px;
 }
 
 .hidden {
@@ -41,7 +61,7 @@ footer {
 }
 
 #diceImg{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 25px;
 }
