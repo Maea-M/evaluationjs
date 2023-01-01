@@ -46,6 +46,14 @@ function nextPlayer(){
     document.getElementById("current-1").textContent = 0;
     document.querySelector(".player-One-Container").classList.toggle("active");
     document.querySelector(".player-Two-Container").classList.toggle("active");
+
+    if (activePlayer === '0') {
+        document.querySelector(".player-One-Container").style.backgroundColor = "#6E7271";
+        document.querySelector(".player-Two-Container").style.backgroundColor = "#ACAD94";
+    } else{
+        document.querySelector(".player-One-Container").style.backgroundColor = "#ACAD94";
+        document.querySelector(".player-Two-Container").style.backgroundColor = "#6E7271";
+    }
 }
 
 /*2/When we click on the button ROllDice*/
@@ -71,7 +79,7 @@ rollDice.addEventListener('click', ()=>{
     }
 });
     
-    /*3/When we click on the button Hold*/
+/*3/When we click on the button Hold*/
 
 hold.addEventListener('click', () =>{
     if (launchGame) {

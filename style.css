@@ -9,7 +9,6 @@
 body{
     background-color: #E2E2E2;
     font-family: 'Lato', sans-serif;
-    border : solid 10px #384D48;
     height: 100vh;
 }
 
@@ -21,7 +20,6 @@ body{
 
 /* specific*/
 main {
-    background-color: #ACAD94;
     border-radius: 5px;
     flex-direction: column;
     height: 80vh;
