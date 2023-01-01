@@ -58,8 +58,8 @@ rollDice.addEventListener('click', ()=>{
         let image = document.querySelector("#diceImg");
         image.src = `images/face-${dice}.png`;
     
-        /*Lorsque la valeur du dé vaut 1:
-        - le score round goes to zero*/
+        /*when value of the dice = 1:
+        - the score round goes to zero*/
         if (dice !== 1){
         roundScore += dice;
         document.getElementById(`current-${activePlayer}`).textContent = roundScore;
@@ -80,7 +80,7 @@ hold.addEventListener('click', () =>{
         document.getElementById(`globalScore-${activePlayer}`).textContent =
         globalPlayer [activePlayer];
 
-    /*- Check if player's score is >= 100 */
+    /*- if player's score is >= 100 */
     if (globalPlayer [activePlayer] >= 100) {
         launchGame = false;
         diceImg.classList.add('hidden');
