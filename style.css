@@ -3,13 +3,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 body{
     background-color: #E2E2E2;
     font-family: 'Lato', sans-serif;
     border : solid 10px #384D48;
+    height: 100vh;
 }
 
 .flex {
@@ -23,6 +24,7 @@ main {
     background-color: #ACAD94;
     border-radius: 5px;
     flex-direction: column;
+    height: 80vh;
 }
 
 section{
@@ -32,6 +34,7 @@ section{
     width: 80vw;
     padding: 10px;
     margin: 10px;
+    height: 50vh;
 }
 
 .current-box{
@@ -49,7 +52,7 @@ section{
 
 footer {
     flex-direction: column;
-    padding: 5px;
+    padding: 10px;
 }
 
 .bi{
@@ -61,7 +64,37 @@ footer {
 }
 
 #diceImg{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 25px;
+}
+
+/*Screen desktop*/
+
+@media (min-width : 915px) {
+    main{
+        flex-direction: row;
+        position: relative;
+    }
+
+    .btn {
+        position: absolute;
+    }
+
+    #newGame {
+        top: 4%;
+    }
+    
+    #hold {
+        bottom: 35%;
+    }
+    
+    #rollDice{
+        bottom: 25%;
+    }
+
+    #diceImg {
+        position: absolute;
+        bottom: 55%;
+    }
 }

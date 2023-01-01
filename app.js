@@ -91,8 +91,10 @@ hold.addEventListener("click", ()=>{
 - on ne peut plus continuer à jouer
 */
 
-while (globalPlayer[activePlayer] >= 100) {
+if (globalPlayer[activePlayer] >= 100) {
     alert ('vous avez gagné!')
     launchGame = false
     dice.classList.add('hidden');
+} else {
+    nextPlayer();
 }
