@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #E2E2E2;
+    background-color: white;
     font-family: 'Lato', sans-serif;
     height: 100vh;
     position: relative;
@@ -22,6 +22,7 @@ body{
 /* specific*/
 header {
     margin: 10px;
+    color: #a62639;
 }
 
 main {
@@ -35,10 +36,11 @@ main p, h2 {
 
 #globalScore-1, #globalScore-0{
     font-size: 60px;
+    color: #a62639;
 }
 
 section{
-    background-color: #6E7271;
+    background-color: white;
     flex-direction: column;
     border-radius: 5px;
     width: 80vw;
@@ -48,13 +50,13 @@ section{
 
 .current-box{
     flex-direction: column;
-    background-color: #E2E2E2;
+    background-color: #a62639;
+    color : white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 15px;
 }
 
 .btn{
-    border: solid 2px #384D48;
     margin: 5px;
     padding: 5px;
 }
@@ -62,12 +64,14 @@ section{
 footer {
     flex-direction: column;
     padding: 10px;
-    background-color: #6E7271;
+    background-color:white;
     bottom: 0;
+    color: #a62639;
 }
 
 .bi{
     font-size: 20px;
+    color: #a62639;
 }
 
 .hidden {
@@ -78,6 +82,7 @@ footer {
     width: 90px;
     height: 90px;
     border-radius: 25px;
+    margin-top: 10px;
 }
 
 /*Screen desktop*/

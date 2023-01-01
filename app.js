@@ -48,11 +48,11 @@ function nextPlayer(){
     document.querySelector(".player-Two-Container").classList.toggle("active");
 
     if (activePlayer === '0') {
-        document.querySelector(".player-One-Container").style.backgroundColor = "#6E7271";
-        document.querySelector(".player-Two-Container").style.backgroundColor = "#ACAD94";
+        document.querySelector(".player-One-Container").style.backgroundColor = "white";
+        document.querySelector(".player-Two-Container").style.backgroundColor = "#f2f4f3";
     } else{
-        document.querySelector(".player-One-Container").style.backgroundColor = "#ACAD94";
-        document.querySelector(".player-Two-Container").style.backgroundColor = "#6E7271";
+        document.querySelector(".player-One-Container").style.backgroundColor = "#f2f4f3";
+        document.querySelector(".player-Two-Container").style.backgroundColor = "white";
     }
 }
 
