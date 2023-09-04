@@ -51,7 +51,7 @@ section{
 .current-box{
     flex-direction: column;
     background-color: #a62639;
-    color : white;
+    color:ghostwhite;
     border-radius: 5px;
     padding: 15px;
 }
