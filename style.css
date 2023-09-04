@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: white;
+    background-color:ghostwhite;
     font-family: 'Lato', sans-serif;
     height: 100vh;
     position: relative;
@@ -40,7 +40,7 @@ main p, h2 {
 }
 
 section{
-    background-color: white;
+    background-color:#f6e5e8;
     flex-direction: column;
     border-radius: 5px;
     width: 80vw;
@@ -64,7 +64,7 @@ section{
 footer {
     flex-direction: column;
     padding: 10px;
-    background-color:white;
+    background-color:ghostwhite;
     bottom: 0;
     color: #a62639;
 }

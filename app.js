@@ -1,12 +1,15 @@
 /*
 GlobalPlayer = array to get scores of 2 players, 
 id = globalScore-1 globalScore-2
+
 roundScore =  score by set,
 id= current-1 and current-2
+
 activePlayer = player 1 ou 2,
 id= player-1 and player-2
 launchGame =  true if begin
 */
+
 let globalPlayer, roundScore, activePlayer, launchGame;
 
 /*make  const for buttons and dice
